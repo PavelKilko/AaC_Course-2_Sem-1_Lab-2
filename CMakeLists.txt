@@ -3,4 +3,4 @@ project(lab2)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(lab2 main.cpp)
+add_executable(lab2 main.cpp substrings_search.cpp substrings_search.h)
