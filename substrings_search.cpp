@@ -90,7 +90,7 @@ int Bohr::get_suffix_link(int v)
         }
         else
         {
-            bohr[v].suffixLink=get_auto_move(get_suffix_link(bohr[v].parent), bohr[v].symbol);
+            bohr[v].suffixLink = get_auto_move(get_suffix_link(bohr[v].parent), bohr[v].symbol);
         }
     }
     return bohr[v].suffixLink;
@@ -126,7 +126,7 @@ int Bohr::get_suffix_fine_link(int v)
         int u = get_suffix_link(v);
         if (u == 0)
         {
-            bohr[v].suffixFineLink=0;
+            bohr[v].suffixFineLink = 0;
         }
         else
         {
@@ -141,7 +141,7 @@ void Bohr::check(int v, int i)
     for (int u = v; u != 0; u = get_suffix_link(u))
     {
         if (bohr[u].flag)
-            std::cout << i - pattern[bohr[u].patternNumber].length() + 1 << ' ' << pattern[bohr[u].patternNumber] << std::endl;
+            std::cout << pattern[bohr[u].patternNumber] << ' ' << i - pattern[bohr[u].patternNumber].length() + 1 << std::endl;
     }
 }
 
